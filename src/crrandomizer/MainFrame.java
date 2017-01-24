@@ -19,11 +19,11 @@ public class MainFrame extends JFrame {
     public MainFrame() {
         //da unos valores iniciales al JFrame
         initiateComponents();
-        
+
         this.add(new CardSelectedPanel());
     }
 
-    private void initiateComponents() {  
+    private void initiateComponents() {
         //Indica el tamaño inicial de la aplicacion (800x600)
         this.setSize(new Dimension(800, 600));
 
