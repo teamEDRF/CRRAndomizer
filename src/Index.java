@@ -5,6 +5,7 @@
  */
 package crrandomizer;
 
+import crrandomizer.model.CardMapper;
 import crrandomizer.view.MainFrame;
 
 /**
@@ -14,11 +15,18 @@ import crrandomizer.view.MainFrame;
 public class Index {
 
     /**
+     *
+     */
+    public static final String XML_CARD_FILE  = "./assets/xml/cards.xml";
+
+    /**
      * @param args the command line arguments
      */
     public static void main(String[] args) {
-        MainFrame mainFrame = new MainFrame();
-        mainFrame.setVisible(true);
+new CardMapper().loadFile();
+
+//        MainFrame mainFrame = new MainFrame();
+//        mainFrame.setVisible(true);
     }
-    
+
 }

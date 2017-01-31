@@ -6,6 +6,7 @@
 package crrandomizer.model;
 
 /**
+ * Model to card objects
  *
  * @author santi
  */
@@ -16,6 +17,13 @@ public class Card {
 
     public Card(String name, int id) {
         this.name = name;
+        this.id = id;
+    }
+
+    public Card() {
+    }
+
+    public Card(int id) {
         this.id = id;
     }
 
@@ -30,7 +38,7 @@ public class Card {
     public int getId() {
         return id;
     }
-    
+
     public void setId(int id) {
         this.id = id;
     }
