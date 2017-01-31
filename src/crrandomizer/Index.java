@@ -5,6 +5,8 @@
  */
 package crrandomizer;
 
+import crrandomizer.view.MainFrame;
+
 /**
  *
  * @author santi
