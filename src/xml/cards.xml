@@ -8,15 +8,21 @@ and open the template in the editor.
 
 <root>
     <card id="1">
-		<name>yong</name>
-		<lastname>mook kim</lastname>
-		<nickname>mkyong</nickname>
-		<salary>100000</salary>
-	</card>
-	<card id="2">
-		<name>low</name>
-		<lastname>yin fong</lastname>
-		<nickname>fong fong</nickname>
-		<salary>200000</salary>
-	</card>
+        <name>Dragon infernal</name>
+    </card>
+    <card id="2">
+        <name>Cementerio</name>
+    </card>
+    <card id="3">
+        <name>Chispitas</name>
+    </card>
+    <card id="4">
+        <name>Mago de hielo</name>
+    </card>    
+    <card id="5">
+        <name>Sabueso de lava</name>
+    </card>
+    <card id="6">
+        <name>NOMBRE</name>
+    </card>
 </root>

@@ -3,7 +3,7 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package crrandomizer.model;
+package model;
 
 /**
  * Model to card objects
@@ -14,9 +14,10 @@ public class Card {
 
     private String name;
     private int id;
+    private String url;
 
     public Card(String name, int id) {
-        this.name = name;
+        setName(name);
         this.id = id;
     }
 
@@ -33,6 +34,7 @@ public class Card {
 
     public void setName(String name) {
         this.name = name;
+        this.url = "./assets/images/" + name.replace(" ", "_") + ".png";
     }
 
     public int getId() {

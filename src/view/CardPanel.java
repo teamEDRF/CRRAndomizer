@@ -3,7 +3,7 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package crrandomizer.view;
+package view;
 
 import java.awt.Color;
 import java.util.Random;
@@ -47,8 +47,7 @@ public class CardPanel extends JPanel {
             default:
                 throw new AssertionError();
         }
-        
-        
+
         this.setBackground(color);
     }
 }
