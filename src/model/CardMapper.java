@@ -13,6 +13,7 @@ import org.w3c.dom.NodeList;
 import org.w3c.dom.Node;
 import org.w3c.dom.Element;
 import java.io.File;
+import java.util.ArrayList;
 
 /**
  *
@@ -20,8 +21,8 @@ import java.io.File;
  */
 public class CardMapper {
 
-    public void loadFile() {
-
+    public ArrayList<Card> loadFile() {
+        ArrayList<Card> baraja = new ArrayList<>();
         try {
 
             File xmlFile = new File(Index.XML_CARD_FILE);
@@ -42,10 +43,14 @@ public class CardMapper {
                     Element eElement = (Element) nNode;
                     Card card = new Card(Integer.parseInt(eElement.getAttribute("id")));
                     card.setName(eElement.getElementsByTagName("name").item(0).getTextContent());
+
+                    baraja.add(card);
                 }
+
             }
         } catch (Exception e) {
             e.printStackTrace();
         }
+        return baraja;
     }
 }

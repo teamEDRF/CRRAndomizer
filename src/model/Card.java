@@ -16,6 +16,10 @@ public class Card {
     private int id;
     private String url;
 
+    public String getUrl() {
+        return url;
+    }
+
     public Card(String name, int id) {
         setName(name);
         this.id = id;

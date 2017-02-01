@@ -5,6 +5,8 @@
  */
 package index;
 
+import java.util.ArrayList;
+import model.Card;
 import model.CardMapper;
 import view.MainFrame;
 
@@ -18,15 +20,20 @@ public class Index {
      *
      */
     public static final String XML_CARD_FILE = "./src/xml/cards.xml";
+    
+    public static ArrayList<Card> baraja = new CardMapper().loadFile();
+
+    public static ArrayList<Card> getBaraja() {
+        return baraja;
+    }
 
     /**
      * @param args the command line arguments
      */
     public static void main(String[] args) {
-        new CardMapper().loadFile();
 
-//        MainFrame mainFrame = new MainFrame();
-//        mainFrame.setVisible(true);
+        MainFrame mainFrame = new MainFrame();
+        mainFrame.setVisible(true);
     }
 
 }
