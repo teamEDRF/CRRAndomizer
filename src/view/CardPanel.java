@@ -23,14 +23,9 @@ public class CardPanel extends JPanel {
 
     private BufferedImage image;
 
-    public CardPanel() {
-
-
-        Random randomGenerator = new Random();
-        int randomNum = randomGenerator.nextInt(baraja.size());
-
+    public CardPanel(int cardSelected) {
         try {
-            image = ImageIO.read(new File(baraja.get(randomNum).getUrl()));
+            image = ImageIO.read(new File(baraja.get(cardSelected).getUrl()));
         } catch (IOException ex) {
             System.out.println("Error cargando imagen");
         }
@@ -38,7 +33,6 @@ public class CardPanel extends JPanel {
     }
 
     private void initiateComponents() {
-
         this.setBackground(Color.WHITE);
     }
 

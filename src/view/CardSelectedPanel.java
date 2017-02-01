@@ -5,10 +5,13 @@
  */
 package view;
 
+import static index.Index.baraja;
 import java.awt.Color;
 import java.awt.Dimension;
 import java.awt.GridBagConstraints;
 import java.awt.GridBagLayout;
+import java.util.HashSet;
+import java.util.Random;
 import javax.swing.JPanel;
 
 /**
@@ -42,17 +45,27 @@ public class CardSelectedPanel extends JPanel {
         GridBagConstraints gbc_CardPanel = new GridBagConstraints();
         //hace que que ajuste al alto y ancho del layout
         gbc_CardPanel.fill = GridBagConstraints.BOTH;
+        HashSet<Integer> numbers = new HashSet<>();
+        Random randomGenerator = new Random();
+        int[] cards = new int[8];
 
+        int randomNum;
         for (int i = 0; i < 8; i++) {
+            // add 8 card without repeat it
+            do {
+                randomNum = randomGenerator.nextInt(baraja.size());
+                numbers.add(randomNum);
+            } while (numbers.size() <= i);
+            
             if (i < 4) {
                 gbc_CardPanel.gridy = 0;
             } else {
                 gbc_CardPanel.gridy = 1;
             }
             gbc_CardPanel.gridx = i % 4;
-
             //añade a este panel las 8 cartas seleccionadas
-            this.add(new CardPanel(), gbc_CardPanel);
+            this.add(new CardPanel(randomNum), gbc_CardPanel);
+
         }
     }
 }
