@@ -5,9 +5,7 @@
  */
 package view;
 
-import customized_views.ImagePanel;
 import static index.Index.baraja;
-import static index.Index.getBaraja;
 import java.awt.Color;
 import java.awt.Graphics;
 import java.awt.image.BufferedImage;
