@@ -22,4 +22,19 @@ and open the template in the editor.
     <card id="5">
         <name>Sabueso de lava</name>
     </card>
+    <card id="6">
+        <name>Princesa</name>
+    </card>
+    <card id="7">
+        <name>Minero</name>
+    </card>
+    <card id="8">
+        <name>Mago electrico</name>
+    </card>
+    <card id="9">
+        <name>Leñador</name>
+    </card>
+    <card id="10">
+        <name>El tronco</name>
+    </card>
 </root>
