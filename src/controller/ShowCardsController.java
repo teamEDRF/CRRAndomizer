@@ -8,26 +8,37 @@ package controller;
 import static index.Index.baraja;
 import java.util.HashSet;
 import java.util.Random;
-import view.CardPanel;
 import model.Card;
 
 /**
+ * Class controller to manage all actions from show cards panel
  *
  * @author santi
  */
 public class ShowCardsController {
 
-    private Random randomGenerator = new Random();
+    private Random randomGenerator;
+    //conjunto de numeros que indican los id de las cartas
+    private HashSet<Integer> numbers;
+    //cards selected
+    private Card[] cards;
 
+    /**
+     * Get card selected to panel
+     *
+     * @param index selected card index
+     * @return Card selected
+     */
     public Card getCard(int index) {
         return cards[index];
     }
 
-    //conjunto de numeros que indican los id de las cartas
-    private HashSet<Integer> numbers = new HashSet<>();
-    private Card[] cards;
-
+    /**
+     * Initiate controller selecting the 8 cards
+     */
     public ShowCardsController() {
+        this.numbers = new HashSet<>();
+        this.randomGenerator = new Random();
         this.cards = new Card[8];
         int randomNum;
         for (int i = 0; i < 8; i++) {

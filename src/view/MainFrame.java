@@ -16,6 +16,9 @@ import javax.swing.JFrame;
  */
 public class MainFrame extends JFrame {
 
+    public static final int FRAME_WIDTH = 800;
+    public static final int FRAME_HEIGTH = 600;
+
     public MainFrame() {
         //da unos valores iniciales al JFrame
         initiateComponents();
@@ -24,7 +27,7 @@ public class MainFrame extends JFrame {
 
     private void initiateComponents() {
         //Indica el tamaño inicial de la aplicacion (800x600)
-        this.setSize(new Dimension(800, 600));
+        this.setSize(new Dimension(FRAME_WIDTH, FRAME_HEIGTH));
 
         //Hace que la ventana se cierre al pulsar sobre el boton cerrar del frame
         this.setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);

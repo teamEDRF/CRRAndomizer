@@ -6,7 +6,6 @@
 package view;
 
 import controller.ShowCardsController;
-import static index.Index.baraja;
 import java.awt.Color;
 import java.awt.Dimension;
 import java.awt.GridBagConstraints;
