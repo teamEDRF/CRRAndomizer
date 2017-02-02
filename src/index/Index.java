@@ -35,8 +35,6 @@ public class Index {
         MainFrame mainFrame = new MainFrame();
         mainFrame.setVisible(true);
         mainFrame.setResizable(false);
-        
-        
-        
+
     }
 }

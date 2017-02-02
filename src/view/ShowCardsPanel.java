@@ -7,11 +7,8 @@ package view;
 
 import controller.ShowCardsController;
 import java.awt.Color;
-import java.awt.Dimension;
 import java.awt.GridBagConstraints;
 import java.awt.GridBagLayout;
-import java.util.HashSet;
-import java.util.Random;
 import javax.swing.JPanel;
 
 /**
@@ -29,16 +26,14 @@ public class ShowCardsPanel extends JPanel {
     }
 
     private void initiateComponents() {
-        this.setBackground(Color.blue);
-
         //instanciamos el Layout
         GridBagLayout gbl = new GridBagLayout();
         //Filas y columnas del layout
         gbl.columnWidths = new int[]{4};
-        gbl.rowHeights = new int[]{2};
+        gbl.rowHeights = new int[]{3};
         // Peso (importancia) de cada columna (la misma atribulle un tamaño igual)
         gbl.columnWeights = new double[]{1, 1, 1, 1};
-        gbl.rowWeights = new double[]{1, 1, 1, 1};
+        gbl.rowWeights = new double[]{1, 100, 100};
 
         //añado al panel el layout creado
         this.setLayout(gbl);
@@ -51,16 +46,23 @@ public class ShowCardsPanel extends JPanel {
         controller = new ShowCardsController();
 
         for (int i = 0; i < 8; i++) {
-            // add 8 card without repeat it           
+            // select the position of put card           
             if (i < 4) {
-                gbc_CardPanel.gridy = 0;
-            } else {
                 gbc_CardPanel.gridy = 1;
+            } else {
+                gbc_CardPanel.gridy = 2;
             }
             gbc_CardPanel.gridx = i % 4;
-            //añade a este panel las 8 cartas seleccionadas
+            // añade a este panel las 8 cartas seleccionadas
             this.add(new CardPanel(controller.getCard(i)), gbc_CardPanel);
-
         }
+        GridBagConstraints gbc_ButtonsPanel = new GridBagConstraints();
+        //hace que que ajuste al alto y ancho del layout
+        gbc_ButtonsPanel.fill = GridBagConstraints.BOTH;
+        gbc_ButtonsPanel.gridwidth = 4;
+        
+
+        controller = new ShowCardsController();
+        this.add(new ButtonsPanel(), gbc_ButtonsPanel);
     }
 }

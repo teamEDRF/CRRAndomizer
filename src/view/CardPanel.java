@@ -38,6 +38,6 @@ public class CardPanel extends JPanel {
     @Override
     protected void paintComponent(Graphics g) {
         super.paintComponent(g);
-        g.drawImage(image, 0, 0, (int)(MainFrame.FRAME_WIDTH/4.4), (int) (MainFrame.FRAME_HEIGTH/2.2), null); // see javadoc for more info on the parameters            
+        g.drawImage(image, 0, 0, (int) (MainFrame.FRAME_WIDTH / 5), (int) (MainFrame.FRAME_HEIGTH / 2.5), null); // see javadoc for more info on the parameters            
     }
 }
