@@ -37,4 +37,73 @@ and open the template in the editor.
     <card id="10">
         <name>El tronco</name>
     </card>
+    <card id="11">
+        <name>Principe</name>
+    </card>
+    <card id="12">
+        <name>Bebe dragon</name>
+    </card>
+    <card id="13">
+        <name>Bruja</name>
+    </card>
+    <card id="14">
+        <name>Rayo</name>
+    </card>
+    <card id="15">
+        <name>Ejercito de esqueletos</name>
+    </card>
+    <card id="16">
+        <name>Leñador</name>
+    </card>
+    <card id="17">
+        <name>Mago electrico</name>
+    </card>
+    <card id="18">
+        <name>Barril de duendes</name>
+    </card>
+    <card id="19">
+        <name>Esqueleto gigante</name>
+    </card>
+    <card id="20">
+        <name>Globo bombardero</name>
+    </card>
+    <card id="21">
+        <name>Ballesta</name>
+    </card>
+    <card id="22">
+        <name>Furia</name>
+    </card>
+    <card id="23">
+        <name>Hielo</name>
+    </card>
+    <card id="24">
+        <name>Pekka</name>
+    </card>
+    <card id="25">
+        <name>Veneno</name>
+    </card>
+    <card id="26">
+        <name>Espejo</name>
+    </card>
+    <card id="27">
+        <name>Tornado</name>
+    </card>
+    <card id="28">
+        <name>Golem</name>
+    </card>
+    <card id="29">
+        <name>Principe oscuro</name>
+    </card>
+    <card id="30">
+        <name>Guardias</name>
+    </card>
+    <card id="31">
+        <name>Lanzarrocas</name>
+    </card>
+    <card id="32">
+        <name>Clon</name>
+    </card>
+    <card id="33">
+        <name>Verdugo</name>
+    </card>
 </root>
