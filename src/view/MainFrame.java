@@ -20,7 +20,7 @@ public class MainFrame extends JFrame {
         //da unos valores iniciales al JFrame
         initiateComponents();
 
-        this.add(new CardSelectedPanel());
+        this.add(new ShowCardsPanel());
     }
 
     private void initiateComponents() {

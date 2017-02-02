@@ -17,23 +17,27 @@ import view.MainFrame;
 public class Index {
 
     /**
-     *
+     * Routo to xml file with all card data
      */
     public static final String XML_CARD_FILE = "./src/xml/cards.xml";
-    
-    public static ArrayList<Card> baraja = new CardMapper().loadFile();
-
-    public static ArrayList<Card> getBaraja() {
-        return baraja;
-    }
+    /**
+     * Arraylist with all cards in xml file
+     */
+    public static ArrayList<Card> baraja;
 
     /**
      * @param args the command line arguments
      */
     public static void main(String[] args) {
-
+        //fill list data
+        baraja = new CardMapper().loadFile();
+        //start frame
         MainFrame mainFrame = new MainFrame();
         mainFrame.setVisible(true);
+        
+        
+        
+        
+        
     }
-
 }

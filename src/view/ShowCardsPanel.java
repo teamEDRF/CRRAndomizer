@@ -20,9 +20,9 @@ import javax.swing.JPanel;
  *
  * @author santi
  */
-public class CardSelectedPanel extends JPanel {
+public class ShowCardsPanel extends JPanel {
 
-    public CardSelectedPanel() {
+    public ShowCardsPanel() {
         initiateComponents();
     }
 
