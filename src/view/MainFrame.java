@@ -42,4 +42,9 @@ public class MainFrame extends JFrame {
         gbl.setConstraints(this, gbc_MainFrame);
 
     }
+    
+    public  void repartir(){
+        this.removeAll();
+        this.add(new ShowCardsPanel());
+    }
 }

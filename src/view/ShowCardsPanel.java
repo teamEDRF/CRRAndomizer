@@ -60,7 +60,6 @@ public class ShowCardsPanel extends JPanel {
         //hace que que ajuste al alto y ancho del layout
         gbc_ButtonsPanel.fill = GridBagConstraints.BOTH;
         gbc_ButtonsPanel.gridwidth = 4;
-        
 
         controller = new ShowCardsController();
         this.add(new ButtonsPanel(), gbc_ButtonsPanel);

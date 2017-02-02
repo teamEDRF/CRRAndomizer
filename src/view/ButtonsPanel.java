@@ -16,17 +16,25 @@ import strings.StringResource;
  * @author santi
  */
 public class ButtonsPanel extends JPanel {
-    
+
     public ButtonsPanel() {
         initiateComponents();
-        
+
     }
-    
+
     private void initiateComponents() {
         this.setBackground(Color.WHITE);
         JButton randomizeButton = new JButton();
         randomizeButton.setText(StringResource.REPARTIR);
-        
+
+        randomizeButton.addActionListener(new java.awt.event.ActionListener() {
+            @Override
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+            
+                
+            }
+        });
         this.add(randomizeButton);
     }
+
 }
