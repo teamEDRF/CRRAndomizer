@@ -5,15 +5,14 @@
  */
 package view;
 
-import static index.Index.baraja;
 import java.awt.Color;
 import java.awt.Graphics;
 import java.awt.image.BufferedImage;
 import java.io.File;
 import java.io.IOException;
-import java.util.Random;
 import javax.imageio.ImageIO;
 import javax.swing.JPanel;
+import model.Card;
 
 /**
  *
@@ -23,9 +22,9 @@ public class CardPanel extends JPanel {
 
     private BufferedImage image;
 
-    public CardPanel(int cardSelected) {
+    public CardPanel(Card cardSelected) {
         try {
-            image = ImageIO.read(new File(baraja.get(cardSelected).getUrl()));
+            image = ImageIO.read(new File(cardSelected.getUrl()));
         } catch (IOException ex) {
             System.out.println("Error cargando imagen");
         }

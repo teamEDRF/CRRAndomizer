@@ -19,7 +19,6 @@ public class MainFrame extends JFrame {
     public MainFrame() {
         //da unos valores iniciales al JFrame
         initiateComponents();
-
         this.add(new ShowCardsPanel());
     }
 

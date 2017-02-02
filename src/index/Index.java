@@ -34,8 +34,7 @@ public class Index {
         //start frame
         MainFrame mainFrame = new MainFrame();
         mainFrame.setVisible(true);
-        
-        
+               
         
         
         

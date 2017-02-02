@@ -5,6 +5,7 @@
  */
 package view;
 
+import controller.ShowCardsController;
 import static index.Index.baraja;
 import java.awt.Color;
 import java.awt.Dimension;
@@ -21,6 +22,8 @@ import javax.swing.JPanel;
  * @author santi
  */
 public class ShowCardsPanel extends JPanel {
+
+    ShowCardsController controller;
 
     public ShowCardsPanel() {
         initiateComponents();
@@ -45,18 +48,11 @@ public class ShowCardsPanel extends JPanel {
         GridBagConstraints gbc_CardPanel = new GridBagConstraints();
         //hace que que ajuste al alto y ancho del layout
         gbc_CardPanel.fill = GridBagConstraints.BOTH;
-        HashSet<Integer> numbers = new HashSet<>();
-        Random randomGenerator = new Random();
-        int[] cards = new int[8];
 
-        int randomNum;
+        controller = new ShowCardsController();
+
         for (int i = 0; i < 8; i++) {
-            // add 8 card without repeat it
-            do {
-                randomNum = randomGenerator.nextInt(baraja.size());
-                numbers.add(randomNum);
-            } while (numbers.size() <= i);
-            
+            // add 8 card without repeat it           
             if (i < 4) {
                 gbc_CardPanel.gridy = 0;
             } else {
@@ -64,7 +60,7 @@ public class ShowCardsPanel extends JPanel {
             }
             gbc_CardPanel.gridx = i % 4;
             //añade a este panel las 8 cartas seleccionadas
-            this.add(new CardPanel(randomNum), gbc_CardPanel);
+            this.add(new CardPanel(controller.getCard(i)), gbc_CardPanel);
 
         }
     }
