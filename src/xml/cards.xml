@@ -7,6 +7,10 @@ and open the template in the editor.
 
 
 <root>
+    <!-->Comienzan las epicas<!-->
+    <card id ="0">
+        <name>comodin</name>
+    </card>
     <card id="1">
         <name>Dragon infernal</name>
     </card>
@@ -37,6 +41,8 @@ and open the template in the editor.
     <card id="10">
         <name>El tronco</name>
     </card>
+    <!-->Fin de epicas<!-->
+    <!-->Comienzo de legendarias<!-->
     <card id="11">
         <name>Principe</name>
     </card>
@@ -56,7 +62,7 @@ and open the template in the editor.
         <name>Leñador</name>
     </card>
     <card id="17">
-        <name>Mago electrico</name>
+        <name>Valquiria</name>
     </card>
     <card id="18">
         <name>Barril de duendes</name>
@@ -106,6 +112,7 @@ and open the template in the editor.
     <card id="33">
         <name>Verdugo</name>
     </card>
+    <!--acaban las epicas</-->
     <!-->Empiezo a poner los nombres por orden alfabetico
     sin poner legendarias ni epias</-->
     <card id="34">
@@ -220,7 +227,5 @@ and open the template in the editor.
     <card id="68">
         <name>Trío de Mosqueteras</name>
     </card>
-    <card id="69">
-        <name>Valquiria</name>
-    </card>
+    
 </root>
