@@ -106,4 +106,120 @@ and open the template in the editor.
     <card id="33">
         <name>Verdugo</name>
     </card>
+    <!-->Empiezo a poner los nombres por orden alfabetico
+    sin poner legendarias ni epias</-->
+    <card id="34">
+        <name>Ariete de batalla</name>
+    </card>
+    <card id="35">
+        <name>Arqueras</name>
+    </card>
+    <card id = "35">
+        <name>Barbaros</name>
+    </card>
+    <card id ="36">
+        <name>Barbaros de elite</name>
+    </card>
+    <card id="37">
+        <name>Bola de Fuego</name>
+    </card>
+    <card id ="38">
+        <name>Bombardero</name>
+    </card>
+    <card id = "39">
+        <name>Caballero</name>
+    </card>
+    <card id = "40">
+        <name>Cañon</name>
+    </card>
+    <card id = "40">
+        <name>Choza de duendes</name>
+    </card>
+    <card id="41">
+        <name>Cohete</name>
+    </card>
+    <card id ="42">
+        <name>Descarga</name>
+    </card>
+    <card id="43">
+        <name>Dundes con Lanza</name>
+    </card>
+    <card id ="44">
+        <name>Duendes</name>
+    </card>
+    <card id = "45">
+        <name>Esbirros</name>
+    </card>
+    <card id = "46">
+        <name>Espiritu de Hielo</name>
+    </card>
+    <card id = "47">
+        <name>Espirtus de Fuego</name>
+    </card>
+    <card id = "48">
+        <name>Esqueletos</name>
+    </card>
+    <card id = "49">
+        <name>Flechas</name>
+    </card>
+    <card id ="50">
+        <name>Gigante noble</name>
+    </card>
+    <card id ="51">
+        <name>Gigante</name>
+    </card>
+    <card id="52">
+        <name>Golem de Hielo</name>
+    </card>
+    <card id = "53">
+        <name>Horda de esbirros</name>
+    </card>
+    <card id ="54">
+        <name>Horno</name>
+    </card>
+    <card id ="55">
+        <name>Lanzadardos</name>
+    </card>
+    <card id= "56">
+        <name>Lapida</name>
+    </card>
+    <card id ="57">
+        <name>Mago</name>
+    </card>
+    <card id ="58">
+        <name>Megaesbirro</name>
+    </card>
+    <card id="59">
+        <name>Mini pekka</name>
+    </card>
+    <card id="60">
+        <name>Montapuercos</name>
+    </card>
+    <card id="61">
+        <name>Mortero</name>
+    </card>
+    <card id="62">
+        <name>Mosquetera</name>
+    </card>
+    <card id="63">
+        <name>Pandilla de duendes</name>
+    </card>
+    <card id="64">
+        <name>Recolector de elixir</name>
+    </card>
+    <card id="65">
+        <name>Torre bombardera</name>
+    </card>
+    <card id="66">
+        <name>Torre infernal</name>
+    </card>
+    <card i="67">
+        <name>Torre tesla</name>
+    </card>
+    <card id="68">
+        <name>Trío de Mosqueteras</name>
+    </card>
+    <card id="69">
+        <name>Valquiria</name>
+    </card>
 </root>
