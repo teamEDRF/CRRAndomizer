@@ -142,7 +142,7 @@ and open the template in the editor.
         <name>Descarga</name>
     </card>
     <card id="43">
-        <name>Dundes con Lanza</name>
+        <name>Duendes con lanza</name>
     </card>
     <card id ="44">
         <name>Duendes</name>
@@ -154,7 +154,7 @@ and open the template in the editor.
         <name>Espiritu de Hielo</name>
     </card>
     <card id = "47">
-        <name>Espirtus de Fuego</name>
+        <name>Espiritus de fuego</name>
     </card>
     <card id = "48">
         <name>Esqueletos</name>
@@ -169,7 +169,7 @@ and open the template in the editor.
         <name>Gigante</name>
     </card>
     <card id="52">
-        <name>Golem de Hielo</name>
+        <name>Golem de hielo</name>
     </card>
     <card id = "53">
         <name>Horda de esbirros</name>
@@ -213,7 +213,8 @@ and open the template in the editor.
     <card id="66">
         <name>Torre infernal</name>
     </card>
-    <card i="67">
+    
+    <card id="67">
         <name>Torre tesla</name>
     </card>
     <card id="68">
