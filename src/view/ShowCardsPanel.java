@@ -22,6 +22,7 @@ public class ShowCardsPanel extends JPanel {
     ShowCardsController controller;
 
     public ShowCardsPanel() {
+        controller = new ShowCardsController();
         initiateComponents();
     }
 
@@ -43,8 +44,19 @@ public class ShowCardsPanel extends JPanel {
         //hace que que ajuste al alto y ancho del layout
         gbc_CardPanel.fill = GridBagConstraints.BOTH;
 
-        controller = new ShowCardsController();
+        showCards(gbc_CardPanel);
 
+        GridBagConstraints gbc_ButtonsPanel = new GridBagConstraints();
+        //hace que que ajuste al alto y ancho del layout
+        gbc_ButtonsPanel.fill = GridBagConstraints.BOTH;
+        // ocupa 4 columnas de 1 fila (todo el ancho del panel)
+        gbc_ButtonsPanel.gridwidth = 4;
+        this.add(new ButtonsPanel(), gbc_ButtonsPanel);
+
+        controller = new ShowCardsController();
+    }
+
+    private void showCards(GridBagConstraints gbc_CardPanel) {
         for (int i = 0; i < 8; i++) {
             // select the position of put card           
             if (i < 4) {
@@ -56,12 +68,5 @@ public class ShowCardsPanel extends JPanel {
             // añade a este panel las 8 cartas seleccionadas
             this.add(new CardPanel(controller.getCard(i)), gbc_CardPanel);
         }
-        GridBagConstraints gbc_ButtonsPanel = new GridBagConstraints();
-        //hace que que ajuste al alto y ancho del layout
-        gbc_ButtonsPanel.fill = GridBagConstraints.BOTH;
-        gbc_ButtonsPanel.gridwidth = 4;
-
-        controller = new ShowCardsController();
-        this.add(new ButtonsPanel(), gbc_ButtonsPanel);
     }
 }

@@ -30,8 +30,7 @@ public class ButtonsPanel extends JPanel {
         randomizeButton.addActionListener(new java.awt.event.ActionListener() {
             @Override
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-            
-                
+                            
             }
         });
         this.add(randomizeButton);

@@ -5,6 +5,7 @@
  */
 package index;
 
+import controller.ShowCardsController;
 import java.util.ArrayList;
 import model.Card;
 import model.CardMapper;
@@ -25,6 +26,8 @@ public class Index {
      */
     public static ArrayList<Card> baraja;
 
+    ShowCardsController showCardsController = new ShowCardsController();
+
     /**
      * @param args the command line arguments
      */
@@ -35,5 +38,6 @@ public class Index {
         MainFrame mainFrame = new MainFrame();
         mainFrame.setVisible(true);
         mainFrame.setResizable(false);
+
     }
 }

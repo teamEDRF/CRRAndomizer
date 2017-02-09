@@ -19,10 +19,13 @@ public class MainFrame extends JFrame {
     public static final int FRAME_WIDTH = 800;
     public static final int FRAME_HEIGTH = 600;
 
+    ShowCardsPanel showCardPanel;
+
     public MainFrame() {
         //da unos valores iniciales al JFrame
         initiateComponents();
-        this.add(new ShowCardsPanel());
+        showCardPanel = new ShowCardsPanel();
+        this.add(showCardPanel);
     }
 
     private void initiateComponents() {
@@ -41,10 +44,5 @@ public class MainFrame extends JFrame {
         gbc_MainFrame.weightx = 1;
         gbl.setConstraints(this, gbc_MainFrame);
 
-    }
-    
-    public  void repartir(){
-        this.removeAll();
-        this.add(new ShowCardsPanel());
     }
 }

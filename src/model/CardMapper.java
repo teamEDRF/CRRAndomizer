@@ -21,6 +21,8 @@ import java.util.ArrayList;
  */
 public class CardMapper {
 
+    int nodeIterator;
+
     public ArrayList<Card> loadFile() {
         ArrayList<Card> baraja = new ArrayList<>();
         try {
@@ -35,9 +37,8 @@ public class CardMapper {
             doc.getDocumentElement().normalize();
 
             NodeList nList = doc.getElementsByTagName("card");
-
-            for (int temp = 0; temp < nList.getLength(); temp++) {
-                Node nNode = nList.item(temp);
+            for (nodeIterator = 0; nodeIterator < nList.getLength(); nodeIterator++) {
+                Node nNode = nList.item(nodeIterator);
 
                 if (nNode.getNodeType() == Node.ELEMENT_NODE) {
                     Element eElement = (Element) nNode;
@@ -49,7 +50,7 @@ public class CardMapper {
 
             }
         } catch (Exception e) {
-            e.printStackTrace();
+            System.out.println("Error cargando los datos en posicion " + nodeIterator);
         }
         return baraja;
     }

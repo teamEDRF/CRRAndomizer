@@ -40,6 +40,10 @@ public class ShowCardsController {
         this.numbers = new HashSet<>();
         this.randomGenerator = new Random();
         this.cards = new Card[8];
+    }
+
+    public void suffleCards() {
+        this.numbers = new HashSet<>();
         int randomNum;
         for (int i = 0; i < 8; i++) {
             // add 8 card without repeat it
