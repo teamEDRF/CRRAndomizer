@@ -139,14 +139,11 @@ and open the template in the editor.
     <card id = "40">
         <name>Cañon</name>
     </card>
-    <card id = "40">
+    <card id = "41">
         <name>Choza de duendes</name>
     </card>
-    <card id="41">
+    <card id="42">
         <name>Cohete</name>
-    </card>
-    <card id ="42">
-        <name>Descarga</name>
     </card>
     <card id="43">
         <name>Duendes con lanza</name>
@@ -227,5 +224,7 @@ and open the template in the editor.
     <card id="68">
         <name>Trío de Mosqueteras</name>
     </card>
-    
+    <card id ="69">
+        <name>Descarga</name>
+    </card>
 </root>
