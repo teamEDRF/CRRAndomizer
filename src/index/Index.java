@@ -24,9 +24,10 @@ public class Index {
     /**
      * Arraylist with all cards in xml file
      */
-    public static ArrayList<Card> baraja;
+    private static ArrayList<Card> baraja;
 
-    public static ShowCardsController showCardsController;
+    private static ShowCardsController showCardsController;
+    private static MainFrame mainFrame;
 
     /**
      * @param args the command line arguments
@@ -37,9 +38,21 @@ public class Index {
         //instancia el controller, necesita tener los datos cargados
         showCardsController = new ShowCardsController();
         //start frame
-        MainFrame mainFrame = new MainFrame(showCardsController);
+        mainFrame = new MainFrame(showCardsController);
         mainFrame.setVisible(true);
         mainFrame.setResizable(false);
+    }
+
+    public static ArrayList<Card> getBaraja() {
+        return baraja;
+    }
+
+    public static ShowCardsController getShowCardsController() {
+        return showCardsController;
+    }
+
+    public static MainFrame getMainFrame() {
+        return mainFrame;
     }
 
 }

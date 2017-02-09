@@ -5,7 +5,6 @@
  */
 package controller;
 
-import static index.Index.baraja;
 import java.util.ArrayList;
 import java.util.HashSet;
 import java.util.Random;
@@ -44,34 +43,42 @@ public class ShowCardsController {
         selectCards();
     }
 
+    /**
+     * Select 8 random cards
+     *
+     */
     public void selectCards() {
         this.numbers = new HashSet<>();
         int randomNum;
         do {
-            randomNum = randomGenerator.nextInt(baraja.size());
+            randomNum = randomGenerator.nextInt(index.Index.getBaraja().size());
             numbers.add(randomNum);
         } while (numbers.size() <= 8);
         System.out.println(numbers);
-        for (Integer number : numbers) {
-            this.cards.add(baraja.get(number));
-        }
+        // this equals than for
+        numbers.forEach((number) -> {
+            this.cards.add(index.Index.getBaraja().get(number));
+        });
         System.out.println(cards);
     }
 
+    /**
+     * remove cards in parameters and calls select cards method
+     *
+     * @param positions cards to remove
+     */
     public void suffleCards(int[] positions) {
         ArrayList<Integer> toRemove = new ArrayList<>();
         //borra del hashset las posiciones que indica
         for (int position : positions) {
-            for (Integer number : numbers) {
-                if (number == cards.get(position).getId()) {
-                    toRemove.add(number);
-                }
-            }
+            // same than foreach { if(xxxxx)}
+            numbers.stream().filter((number) -> (number == cards.get(position).getId())).forEachOrdered((number) -> {
+                toRemove.add(number);
+            });
         }
-        for (Integer integer : toRemove) {
-
+        toRemove.forEach((integer) -> {
             numbers.remove(integer);
-        }
+        });
         selectCards();
     }
 

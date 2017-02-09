@@ -20,7 +20,7 @@ public class MainFrame extends JFrame {
     public static final int FRAME_WIDTH = 800;
     public static final int FRAME_HEIGTH = 600;
 
-    ShowCardsPanel showCardPanel;
+    private ShowCardsPanel showCardPanel;
 
     public MainFrame(ShowCardsController showCardsController) {
         //da unos valores iniciales al JFrame

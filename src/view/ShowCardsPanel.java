@@ -6,7 +6,6 @@
 package view;
 
 import controller.ShowCardsController;
-import java.awt.Color;
 import java.awt.GridBagConstraints;
 import java.awt.GridBagLayout;
 import javax.swing.JPanel;
@@ -19,7 +18,7 @@ import javax.swing.JPanel;
  */
 public class ShowCardsPanel extends JPanel {
 
-    ShowCardsController controller;
+    private ShowCardsController controller;
 
     public ShowCardsPanel(ShowCardsController showCardsController) {
         this.controller = showCardsController;
@@ -67,4 +66,9 @@ public class ShowCardsPanel extends JPanel {
             this.add(new CardPanel(controller.getCard(i)), gbc_CardPanel);
         }
     }
+
+    public void updateCards(int[] positionsChanged) {
+
+    }
+
 }

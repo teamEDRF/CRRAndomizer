@@ -27,7 +27,7 @@ public class CardPanel extends JPanel {
             image = ImageIO.read(new File(cardSelected.getUrl()));
         } catch (IOException ex) {
             System.err.println("Error cargando imagen");
-        }catch (NullPointerException ex){
+        } catch (NullPointerException ex) {
             System.err.println("Error cargando imagen: " + cardSelected.getUrl());
         }
         initiateComponents();
