@@ -41,10 +41,10 @@ public class ShowCardsController {
         this.numbers = new HashSet<>();
         this.randomGenerator = new Random();
         this.cards = new ArrayList<>();
-        suffleCards();
+        selectCards();
     }
 
-    public void suffleCards() {
+    public void selectCards() {
         this.numbers = new HashSet<>();
         int randomNum;
         do {
@@ -59,15 +59,20 @@ public class ShowCardsController {
     }
 
     public void suffleCards(int[] positions) {
+        ArrayList<Integer> toRemove = new ArrayList<>();
         //borra del hashset las posiciones que indica
         for (int position : positions) {
             for (Integer number : numbers) {
                 if (number == cards.get(position).getId()) {
-                    numbers.remove(number);
+                    toRemove.add(number);
                 }
             }
         }
+        for (Integer integer : toRemove) {
 
+            numbers.remove(integer);
+        }
+        selectCards();
     }
 
 }
