@@ -50,7 +50,7 @@ public class CardMapper {
 
             }
         } catch (Exception e) {
-            System.out.println("Error cargando los datos en posicion " + nodeIterator);
+            System.err.println("Error cargando los datos en posicion " + nodeIterator);
         }
         return baraja;
     }

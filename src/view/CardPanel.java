@@ -24,12 +24,11 @@ public class CardPanel extends JPanel {
 
     public CardPanel(Card cardSelected) {
         try {
-            System.out.println(cardSelected.getId()+ " " + cardSelected.getName());
             image = ImageIO.read(new File(cardSelected.getUrl()));
         } catch (IOException ex) {
-            System.out.println("Error cargando imagen");
+            System.err.println("Error cargando imagen");
         }catch (NullPointerException ex){
-            System.out.println("Error cargando imagen: " + cardSelected.getUrl());
+            System.err.println("Error cargando imagen: " + cardSelected.getUrl());
         }
         initiateComponents();
     }

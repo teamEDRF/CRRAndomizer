@@ -6,6 +6,7 @@
 package controller;
 
 import static index.Index.baraja;
+import java.util.ArrayList;
 import java.util.HashSet;
 import java.util.Random;
 import model.Card;
@@ -21,7 +22,7 @@ public class ShowCardsController {
     //conjunto de numeros que indican los id de las cartas
     private HashSet<Integer> numbers;
     //cards selected
-    private Card[] cards;
+    private ArrayList<Card> cards;
 
     /**
      * Get card selected to panel
@@ -30,7 +31,7 @@ public class ShowCardsController {
      * @return Card selected
      */
     public Card getCard(int index) {
-        return cards[index];
+        return cards.get(index);
     }
 
     /**
@@ -39,20 +40,34 @@ public class ShowCardsController {
     public ShowCardsController() {
         this.numbers = new HashSet<>();
         this.randomGenerator = new Random();
-        this.cards = new Card[8];
+        this.cards = new ArrayList<>();
         suffleCards();
     }
 
     public void suffleCards() {
         this.numbers = new HashSet<>();
         int randomNum;
-        for (int i = 0; i < 8; i++) {
-            // add 8 card without repeat it
-            do {
-                randomNum = randomGenerator.nextInt(baraja.size());
-                numbers.add(randomNum);
-            } while (numbers.size() <= i);
-            cards[i] = baraja.get(randomNum);
+        do {
+            randomNum = randomGenerator.nextInt(baraja.size());
+            numbers.add(randomNum);
+        } while (numbers.size() <= 8);
+        System.out.println(numbers);
+        for (Integer number : numbers) {
+            this.cards.add(baraja.get(number));
         }
+        System.out.println(cards);
     }
+
+    public void suffleCards(int[] positions) {
+        //borra del hashset las posiciones que indica
+        for (int position : positions) {
+            for (Integer number : numbers) {
+                if (number == cards.get(position).getId()) {
+                    numbers.remove(number);
+                }
+            }
+        }
+
+    }
+
 }

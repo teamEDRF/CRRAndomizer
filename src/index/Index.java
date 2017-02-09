@@ -36,12 +36,10 @@ public class Index {
         baraja = new CardMapper().loadFile();
         //instancia el controller, necesita tener los datos cargados
         showCardsController = new ShowCardsController();
-        System.out.println(showCardsController.getCard(0));
         //start frame
         MainFrame mainFrame = new MainFrame(showCardsController);
         mainFrame.setVisible(true);
         mainFrame.setResizable(false);
-
     }
 
 }
