@@ -5,6 +5,7 @@
  */
 package view;
 
+import controller.ShowCardsController;
 import java.awt.Dimension;
 import java.awt.GridBagConstraints;
 import java.awt.GridBagLayout;
@@ -21,10 +22,10 @@ public class MainFrame extends JFrame {
 
     ShowCardsPanel showCardPanel;
 
-    public MainFrame() {
+    public MainFrame(ShowCardsController showCardsController) {
         //da unos valores iniciales al JFrame
         initiateComponents();
-        showCardPanel = new ShowCardsPanel();
+        showCardPanel = new ShowCardsPanel(showCardsController);
         this.add(showCardPanel);
     }
 
@@ -44,5 +45,9 @@ public class MainFrame extends JFrame {
         gbc_MainFrame.weightx = 1;
         gbl.setConstraints(this, gbc_MainFrame);
 
+    }
+
+    public ShowCardsPanel getShowCardPanel() {
+        return showCardPanel;
     }
 }

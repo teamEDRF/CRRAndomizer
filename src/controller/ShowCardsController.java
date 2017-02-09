@@ -40,6 +40,7 @@ public class ShowCardsController {
         this.numbers = new HashSet<>();
         this.randomGenerator = new Random();
         this.cards = new Card[8];
+        suffleCards();
     }
 
     public void suffleCards() {

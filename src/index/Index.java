@@ -26,7 +26,7 @@ public class Index {
      */
     public static ArrayList<Card> baraja;
 
-    ShowCardsController showCardsController = new ShowCardsController();
+    public static ShowCardsController showCardsController;
 
     /**
      * @param args the command line arguments
@@ -34,10 +34,14 @@ public class Index {
     public static void main(String[] args) {
         //fill list data
         baraja = new CardMapper().loadFile();
+        //instancia el controller, necesita tener los datos cargados
+        showCardsController = new ShowCardsController();
+        System.out.println(showCardsController.getCard(0));
         //start frame
-        MainFrame mainFrame = new MainFrame();
+        MainFrame mainFrame = new MainFrame(showCardsController);
         mainFrame.setVisible(true);
         mainFrame.setResizable(false);
 
     }
+
 }

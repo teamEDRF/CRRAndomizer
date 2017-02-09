@@ -21,8 +21,8 @@ public class ShowCardsPanel extends JPanel {
 
     ShowCardsController controller;
 
-    public ShowCardsPanel() {
-        controller = new ShowCardsController();
+    public ShowCardsPanel(ShowCardsController showCardsController) {
+        this.controller = showCardsController;
         initiateComponents();
     }
 
@@ -44,8 +44,6 @@ public class ShowCardsPanel extends JPanel {
         //hace que que ajuste al alto y ancho del layout
         gbc_CardPanel.fill = GridBagConstraints.BOTH;
 
-        showCards(gbc_CardPanel);
-
         GridBagConstraints gbc_ButtonsPanel = new GridBagConstraints();
         //hace que que ajuste al alto y ancho del layout
         gbc_ButtonsPanel.fill = GridBagConstraints.BOTH;
@@ -53,7 +51,7 @@ public class ShowCardsPanel extends JPanel {
         gbc_ButtonsPanel.gridwidth = 4;
         this.add(new ButtonsPanel(), gbc_ButtonsPanel);
 
-        controller = new ShowCardsController();
+        showCards(gbc_CardPanel);
     }
 
     private void showCards(GridBagConstraints gbc_CardPanel) {
