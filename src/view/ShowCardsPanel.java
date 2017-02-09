@@ -5,9 +5,12 @@
  */
 package view;
 
+import com.sun.xml.internal.bind.v2.model.util.ArrayInfoUtil;
 import controller.ShowCardsController;
 import java.awt.GridBagConstraints;
 import java.awt.GridBagLayout;
+import java.util.Arrays;
+import java.lang.Object;
 import javax.swing.JPanel;
 
 /**
@@ -38,11 +41,6 @@ public class ShowCardsPanel extends JPanel {
         //añado al panel el layout creado
         this.setLayout(gbl);
 
-        //restricciones para los CardPanel
-        GridBagConstraints gbc_CardPanel = new GridBagConstraints();
-        //hace que que ajuste al alto y ancho del layout
-        gbc_CardPanel.fill = GridBagConstraints.BOTH;
-
         GridBagConstraints gbc_ButtonsPanel = new GridBagConstraints();
         //hace que que ajuste al alto y ancho del layout
         gbc_ButtonsPanel.fill = GridBagConstraints.BOTH;
@@ -50,11 +48,16 @@ public class ShowCardsPanel extends JPanel {
         gbc_ButtonsPanel.gridwidth = 4;
         this.add(new ButtonsPanel(), gbc_ButtonsPanel);
 
-        showCards(gbc_CardPanel);
+        showCards(new int[]{0, 1, 2, 3, 4, 5, 6, 7});
     }
 
-    private void showCards(GridBagConstraints gbc_CardPanel) {
+    public void showCards(int[] positionsToUpdate) {
+        //restricciones para los CardPanel
+        GridBagConstraints gbc_CardPanel = new GridBagConstraints();
+        //hace que que ajuste al alto y ancho del layout
+        gbc_CardPanel.fill = GridBagConstraints.BOTH;
         for (int i = 0; i < 8; i++) {
+            if (contains(positionsToUpdate, i));
             // select the position of put card           
             if (i < 4) {
                 gbc_CardPanel.gridy = 1;
@@ -63,12 +66,17 @@ public class ShowCardsPanel extends JPanel {
             }
             gbc_CardPanel.gridx = i % 4;
             // añade a este panel las 8 cartas seleccionadas
-            this.add(new CardPanel(controller.getCard(i)), gbc_CardPanel);
+            this.add(new CardPanel(controller.getCard(i), i), gbc_CardPanel);
         }
     }
 
-    public void updateCards(int[] positionsChanged) {
-
+    private boolean contains(int[] positionsToUpdate, int i) {
+        for (int pos : positionsToUpdate) {
+            if (pos == i) {
+                return true;
+            }
+        }
+        return false;
     }
 
 }

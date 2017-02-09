@@ -21,8 +21,9 @@ import model.Card;
 public class CardPanel extends JPanel {
 
     private BufferedImage image;
+    private int position;
 
-    public CardPanel(Card cardSelected) {
+    public CardPanel(Card cardSelected, int position) {
         try {
             image = ImageIO.read(new File(cardSelected.getUrl()));
         } catch (IOException ex) {
@@ -30,6 +31,7 @@ public class CardPanel extends JPanel {
         } catch (NullPointerException ex) {
             System.err.println("Error cargando imagen: " + cardSelected.getUrl());
         }
+        this.position = position;
         initiateComponents();
     }
 
@@ -42,4 +44,9 @@ public class CardPanel extends JPanel {
         super.paintComponent(g);
         g.drawImage(image, 0, 0, (int) (MainFrame.FRAME_WIDTH / 5), (int) (MainFrame.FRAME_HEIGTH / 2.5), null); // see javadoc for more info on the parameters            
     }
+
+    public int getPosition() {
+        return position;
+    }
+
 }
