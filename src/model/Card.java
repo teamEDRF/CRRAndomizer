@@ -53,6 +53,5 @@ public class Card {
     public String toString() {
         return id + "-" + name + '}';
     }
-    
 
 }

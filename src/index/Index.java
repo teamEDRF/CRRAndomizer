@@ -9,6 +9,7 @@ import controller.ShowCardsController;
 import java.util.ArrayList;
 import model.Card;
 import model.CardMapper;
+import org.jvnet.substance.SubstanceLookAndFeel;
 import view.MainFrame;
 
 /**
@@ -28,6 +29,33 @@ public class Index {
 
     private static ShowCardsController showCardsController;
     private static MainFrame mainFrame;
+   private static String[] skinResource = new String[]{
+        "org.jvnet.substance.skin.AutumnSkin",
+        "org.jvnet.substance.skin.BusinessBlackSteelSkin",
+        "org.jvnet.substance.skin.BusinessBlueSteelSkin",
+        "org.jvnet.substance.skin.BusinessSkin",
+        "org.jvnet.substance.skin.CremeCoffeeSkin",
+        //            5
+        "org.jvnet.substance.skin.CremeSkin",
+        "org.jvnet.substance.skin.EmeraldDuskSkin",
+        "org.jvnet.substance.skin.FieldOfWheatSkin",
+        "org.jvnet.substance.skin.FindingNemoSkin",
+        "org.jvnet.substance.skin.GreenMagicSkin",
+        //            10
+        "org.jvnet.substance.skin.MagmaSkin",
+        "org.jvnet.substance.skin.MangoSkin",
+        "org.jvnet.substance.skin.MistAquaSkin",
+        "org.jvnet.substance.skin.ModerateSkin",
+        "org.jvnet.substance.skin.NebulaBrickWallSkin",
+        //            15
+        "org.jvnet.substance.skin.NebulaSkin",
+        "org.jvnet.substance.skin.OfficeBlue2007Skin",
+        "org.jvnet.substance.skin.OfficeSilver2007Skin",
+        "org.jvnet.substance.skin.RavenGraphiteGlassSkin",
+        "org.jvnet.substance.skin.RavenGraphiteSkin",
+        //            20
+        "org.jvnet.substance.skin.RavenSkin",
+        "org.jvnet.substance.skin.SaharaSkin"};
 
     /**
      * @param args the command line arguments
@@ -39,8 +67,12 @@ public class Index {
         showCardsController = new ShowCardsController();
         //start frame
         mainFrame = new MainFrame(showCardsController);
-        mainFrame.setVisible(true);
+        //que nos permite dejar a Substance la decoracion ( por asi decirlo) 
+        MainFrame.setDefaultLookAndFeelDecorated(true);
+        // Setencia que aplica el skin Creme de Substance
+        SubstanceLookAndFeel.setSkin(skinResource[9]);
         mainFrame.setResizable(false);
+        mainFrame.setVisible(true);
     }
 
     public static ArrayList<Card> getBaraja() {

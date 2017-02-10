@@ -5,13 +5,11 @@
  */
 package view;
 
-import com.sun.xml.internal.bind.v2.model.util.ArrayInfoUtil;
 import controller.ShowCardsController;
 import java.awt.Color;
 import java.awt.Component;
 import java.awt.GridBagConstraints;
 import java.awt.GridBagLayout;
-import java.util.Arrays;
 import javax.swing.JPanel;
 
 /**
@@ -30,7 +28,6 @@ public class ShowCardsPanel extends JPanel {
     }
 
     private void initiateComponents() {
-        this.setBackground(Color.red);
         //instanciamos el Layout
         GridBagLayout gbl = new GridBagLayout();
         //Filas y columnas del layout
@@ -76,7 +73,7 @@ public class ShowCardsPanel extends JPanel {
             // añade a este panel las 8 cartas seleccionadas
             this.add(new CardPanel(controller.getCard(i), i), gbc_CardPanel);
         }
-validate();
+        validate();
         repaint();
     }
 
