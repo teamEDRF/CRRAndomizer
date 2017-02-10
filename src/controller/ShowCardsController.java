@@ -54,13 +54,12 @@ public class ShowCardsController {
             randomNum = randomGenerator.nextInt(index.Index.getBaraja().size());
             numbers.add(randomNum);
         } while (numbers.size() <= 8);
-        System.out.println(numbers);
         // this equals than for
         this.cards.clear();
         numbers.forEach((number) -> {
             this.cards.add(index.Index.getBaraja().get(number));
         });
-        System.out.println(cards);
+        System.out.println(numbers);
     }
 
     /**

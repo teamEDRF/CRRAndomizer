@@ -6,9 +6,10 @@
 package view;
 
 import java.awt.Color;
-import java.awt.Dimension;
 import javax.swing.JButton;
 import javax.swing.JPanel;
+import org.jvnet.substance.SubstanceLookAndFeel;
+import org.jvnet.substance.button.StandardButtonShaper;
 import strings.StringResource;
 
 /**
@@ -31,7 +32,7 @@ public class ButtonsPanel extends JPanel {
             @Override
             public void actionPerformed(java.awt.event.ActionEvent evt) {
 //                int[] toRemove = new int[]{0, 1, 2, 3, 4, 5, 6, 7};
-                int[] toRemove = new int[]{0, 1, 2, 3, 4, 5, 6, 7};
+                int[] toRemove = new int[]{0, 1, 2, 3, 4, 5, 6};
                 // remove all cards (positions 0-7)
                 index.Index.getShowCardsController().suffleCards(toRemove);
                 index.Index.getMainFrame().getShowCardPanel().showCards(toRemove);

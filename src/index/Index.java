@@ -29,7 +29,7 @@ public class Index {
 
     private static ShowCardsController showCardsController;
     private static MainFrame mainFrame;
-   private static String[] skinResource = new String[]{
+    private static String[] skinResource = new String[]{
         "org.jvnet.substance.skin.AutumnSkin",
         "org.jvnet.substance.skin.BusinessBlackSteelSkin",
         "org.jvnet.substance.skin.BusinessBlueSteelSkin",

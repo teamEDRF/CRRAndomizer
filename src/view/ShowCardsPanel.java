@@ -58,14 +58,11 @@ public class ShowCardsPanel extends JPanel {
         //hace que que ajuste al alto y ancho del layout
         gbc_CardPanel.fill = GridBagConstraints.BOTH;
 
-        System.out.print("Cartas a añadir: ");
         for (int i = 0; i < 8; i++) {
             if (contains(positionsToUpdate, i));
-            System.out.print(" " + controller.getCard(i).getId());
             // select the position of put card           
             if (i < 4) {
                 gbc_CardPanel.gridy = 1;
-                System.out.println("a");
             } else {
                 gbc_CardPanel.gridy = 2;
             }
