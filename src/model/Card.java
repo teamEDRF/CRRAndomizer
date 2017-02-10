@@ -12,8 +12,8 @@ package model;
  */
 public class Card {
 
-    private String name;
     private int id;
+    private String name;
     private String url;
 
     public String getUrl() {
@@ -48,5 +48,11 @@ public class Card {
     public void setId(int id) {
         this.id = id;
     }
+
+    @Override
+    public String toString() {
+        return id + "-" + name + '}';
+    }
+    
 
 }

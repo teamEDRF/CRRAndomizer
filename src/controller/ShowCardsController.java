@@ -56,6 +56,7 @@ public class ShowCardsController {
         } while (numbers.size() <= 8);
         System.out.println(numbers);
         // this equals than for
+        this.cards.clear();
         numbers.forEach((number) -> {
             this.cards.add(index.Index.getBaraja().get(number));
         });
