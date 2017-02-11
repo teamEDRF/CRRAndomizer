@@ -119,10 +119,7 @@ and open the template in the editor.
         <name>Ariete de batalla</name>
     </card>
     <card id="35">
-        <name>Arqueras</name>
-    </card>
-    <card id = "35">
-        <name>Barbaros</name>
+        <name>Arqueras</name> 
     </card>
     <card id ="36">
         <name>Barbaros de elite</name>
@@ -217,7 +214,6 @@ and open the template in the editor.
     <card id="66">
         <name>Torre infernal</name>
     </card>
-    
     <card id="67">
         <name>Torre tesla</name>
     </card>
@@ -226,5 +222,8 @@ and open the template in the editor.
     </card>
     <card id ="69">
         <name>Descarga</name>
+    </card>
+    <card id = "70">
+        <name>Barbaros</name>
     </card>
 </root>
