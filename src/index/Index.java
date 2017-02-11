@@ -67,9 +67,9 @@ public class Index {
         showCardsController = new ShowCardsController();
         //start frame
         mainFrame = new MainFrame(showCardsController);
-        //que nos permite dejar a Substance la decoracion ( por asi decirlo) 
+        //nos permite dejar a Substance el estilo 
         MainFrame.setDefaultLookAndFeelDecorated(true);
-        // Setencia que aplica el skin Creme de Substance
+        // Setencia que aplica el skin de Substance
         SubstanceLookAndFeel.setSkin(skinResource[9]);
         mainFrame.setResizable(false);
         mainFrame.setVisible(true);

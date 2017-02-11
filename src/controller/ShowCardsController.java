@@ -53,7 +53,7 @@ public class ShowCardsController {
         do {
             randomNum = randomGenerator.nextInt(index.Index.getBaraja().size());
             numbers.add(randomNum);
-        } while (numbers.size() <= 8);
+        } while (numbers.size() < 8);
         // this equals than for
         this.cards.clear();
         numbers.forEach((number) -> {
@@ -72,9 +72,11 @@ public class ShowCardsController {
         //borra del hashset las posiciones que indica
         for (int position : positions) {
             // same than foreach { if(xxxxx)}
-            numbers.stream().filter((number) -> (number == cards.get(position).getId())).forEachOrdered((number) -> {
-                toRemove.add(number);
-            });
+            for (Integer number : numbers) {
+                if (number == cards.get(position).getId()) {
+                    toRemove.add(number);
+                }
+            }
         }
         toRemove.forEach((integer) -> {
             numbers.remove(integer);
