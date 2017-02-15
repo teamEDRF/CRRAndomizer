@@ -33,7 +33,6 @@ public class ButtonsPanel extends JPanel {
                 // remove all cards (positions 0-7)
                 index.Index.getShowCardsController().suffleCards(toRemove);
                 index.Index.getMainFrame().getShowCardPanel().showCards(toRemove);
-
             }
         });
         this.add(randomizeButton);

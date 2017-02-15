@@ -48,9 +48,9 @@ public class ShowCardsController {
      *
      */
     public void selectCards() {
-        this.numbers = new HashSet<>();
         int randomNum;
         do {
+            System.out.println(numbers.size());
             randomNum = randomGenerator.nextInt(index.Index.getBaraja().size());
             numbers.add(randomNum);
         } while (numbers.size() < 8);
