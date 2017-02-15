@@ -50,7 +50,6 @@ public class ShowCardsController {
     public void selectCards() {
         int randomNum;
         do {
-            System.out.println(numbers.size());
             randomNum = randomGenerator.nextInt(index.Index.getBaraja().size());
             numbers.add(randomNum);
         } while (numbers.size() < 8);

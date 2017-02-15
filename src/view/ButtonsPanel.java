@@ -6,6 +6,7 @@
 package view;
 
 import java.awt.Color;
+import java.awt.Dimension;
 import javax.swing.JButton;
 import javax.swing.JPanel;
 import strings.StringResource;
@@ -23,8 +24,10 @@ public class ButtonsPanel extends JPanel {
 
     private void initiateComponents() {
         this.setBackground(Color.WHITE);
+        Dimension buttonDimension = new Dimension(100, 40);
         JButton randomizeButton = new JButton();
         randomizeButton.setText(StringResource.REPARTIR);
+        randomizeButton.setPreferredSize(buttonDimension);
 
         randomizeButton.addActionListener(new java.awt.event.ActionListener() {
             @Override
@@ -33,8 +36,12 @@ public class ButtonsPanel extends JPanel {
                 // remove all cards (positions 0-7)
                 index.Index.getShowCardsController().suffleCards(toRemove);
                 index.Index.getMainFrame().getShowCardPanel().showCards(toRemove);
+                System.out.println(randomizeButton.getSize().width);
+               
             }
         });
         this.add(randomizeButton);
+        repaint();
+        
     }
 }
