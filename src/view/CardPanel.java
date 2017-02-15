@@ -7,6 +7,8 @@ package view;
 
 import java.awt.Color;
 import java.awt.Graphics;
+import java.awt.event.MouseAdapter;
+import java.awt.event.MouseEvent;
 import java.awt.image.BufferedImage;
 import java.io.File;
 import java.io.IOException;
@@ -33,6 +35,22 @@ public class CardPanel extends JPanel {
         }
         this.position = position;
         initiateComponents();
+        this.addMouseListener(new MouseAdapter() {
+            private Color background;
+
+            @Override
+            public void mousePressed(MouseEvent e) {
+                int[] toRemove = new int[]{position};
+                // remove all cards (positions 0-7)
+                index.Index.getShowCardsController().suffleCards(toRemove);
+                index.Index.getMainFrame().getShowCardPanel().showCards(toRemove);
+            }
+
+            @Override
+            public void mouseReleased(MouseEvent e) {
+
+            }
+        });
     }
 
     private void initiateComponents() {
