@@ -10,220 +10,291 @@ and open the template in the editor.
     <!-->Comienzan las epicas<!-->
     <card id ="0">
         <name>comodin</name>
+        <quality>4</quality>
     </card>
     <card id="1">
         <name>Dragon infernal</name>
+        <quality>3</quality>
     </card>
     <card id="2">
         <name>Cementerio</name>
+        <quality>3</quality>
     </card>
     <card id="3">
         <name>Chispitas</name>
+        <quality>3</quality>
     </card>
     <card id="4">
         <name>Mago de hielo</name>
+        <quality>3</quality>
     </card>    
     <card id="5">
         <name>Sabueso de lava</name>
+        <quality>3</quality>
     </card>
     <card id="6">
         <name>Princesa</name>
+        <quality>3</quality>
     </card>
     <card id="7">
         <name>Minero</name>
+        <quality>3</quality>
     </card>
     <card id="8">
         <name>Mago electrico</name>
+        <quality>3</quality>
     </card>
     <card id="9">
         <name>Leñador</name>
+        <quality>3</quality>
     </card>
     <card id="10">
         <name>El tronco</name>
+        <quality>3</quality>
     </card>
     <!-->Fin de epicas<!-->
     <!-->Comienzo de legendarias<!-->
     <card id="11">
         <name>Principe</name>
+        <quality>2</quality>
     </card>
     <card id="12">
         <name>Bebe dragon</name>
+        <quality>2</quality>
     </card>
     <card id="13">
         <name>Bruja</name>
+        <quality>2</quality>
     </card>
     <card id="14">
         <name>Rayo</name>
+        <quality>2</quality>
     </card>
     <card id="15">
         <name>Ejercito de esqueletos</name>
+        <quality>2</quality>
     </card>
     <card id="16">
         <name>Leñador</name>
+        <quality>2</quality>
     </card>
     <card id="17">
         <name>Valquiria</name>
+        <quality>1</quality>
     </card>
     <card id="18">
         <name>Barril de duendes</name>
+        <quality>2</quality>
     </card>
     <card id="19">
         <name>Esqueleto gigante</name>
+        <quality>2</quality>
     </card>
     <card id="20">
         <name>Globo bombardero</name>
+        <quality>2</quality>
     </card>
     <card id="21">
         <name>Ballesta</name>
+        <quality>2</quality>
     </card>
     <card id="22">
         <name>Furia</name>
+        <quality>2</quality>
     </card>
     <card id="23">
         <name>Hielo</name>
+        <quality>2</quality>
     </card>
     <card id="24">
         <name>Pekka</name>
+        <quality>2</quality>
     </card>
     <card id="25">
         <name>Veneno</name>
+        <quality>2</quality>
     </card>
     <card id="26">
         <name>Espejo</name>
+        <quality>2</quality>
     </card>
     <card id="27">
         <name>Tornado</name>
+        <quality>2</quality>
     </card>
     <card id="28">
         <name>Golem</name>
+        <quality>2</quality>
     </card>
     <card id="29">
         <name>Principe oscuro</name>
+        <quality>2</quality>
     </card>
     <card id="30">
         <name>Guardias</name>
+        <quality>2</quality>
     </card>
     <card id="31">
         <name>Lanzarrocas</name>
+        <quality>2</quality>
     </card>
     <card id="32">
         <name>Clon</name>
+        <quality>2</quality>
     </card>
     <card id="33">
         <name>Verdugo</name>
+        <quality>2</quality>
     </card>
     <!--acaban las epicas</-->
     <!-->Empiezo a poner los nombres por orden alfabetico
     sin poner legendarias ni epias</-->
     <card id="34">
         <name>Ariete de batalla</name>
+        <quality>1</quality>
     </card>
     <card id="35">
-        <name>Arqueras</name> 
+        <name>Arqueras</name>
+        <quality>0</quality> 
     </card>
     <card id ="36">
         <name>Barbaros de elite</name>
+        <quality>0</quality>
     </card>
     <card id="37">
         <name>Bola de Fuego</name>
+        <quality>1</quality>
     </card>
     <card id ="38">
         <name>Bombardero</name>
+        <quality>0</quality>
     </card>
     <card id = "39">
         <name>Caballero</name>
+        <quality>0</quality>
     </card>
     <card id = "40">
         <name>Cañon</name>
+        <quality>0</quality>
     </card>
     <card id = "41">
         <name>Choza de duendes</name>
+        <quality>1</quality>
     </card>
     <card id="42">
         <name>Cohete</name>
+        <quality>1</quality>
     </card>
     <card id="43">
         <name>Duendes con lanza</name>
+        <quality>0</quality>
     </card>
     <card id ="44">
         <name>Duendes</name>
+        <quality>0</quality>
     </card>
     <card id = "45">
         <name>Esbirros</name>
+        <quality>0</quality>
     </card>
     <card id = "46">
         <name>Espiritu de Hielo</name>
+        <quality>0</quality>
     </card>
     <card id = "47">
         <name>Espiritus de fuego</name>
+        <quality>0</quality>
     </card>
     <card id = "48">
         <name>Esqueletos</name>
+        <quality>0</quality>
     </card>
     <card id = "49">
         <name>Flechas</name>
+        <quality>0</quality>
     </card>
     <card id ="50">
         <name>Gigante noble</name>
+        <quality>0</quality>
     </card>
     <card id ="51">
         <name>Gigante</name>
+        <quality>1</quality>
     </card>
     <card id="52">
         <name>Golem de hielo</name>
+        <quality>1</quality>
     </card>
     <card id = "53">
         <name>Horda de esbirros</name>
+        <quality>0</quality>
     </card>
     <card id ="54">
         <name>Horno</name>
+        <quality>1</quality>
     </card>
     <card id ="55">
         <name>Lanzadardos</name>
+        <quality>1</quality>
     </card>
     <card id= "56">
         <name>Lapida</name>
+        <quality>1</quality>
     </card>
     <card id ="57">
         <name>Mago</name>
+        <quality>1</quality>
     </card>
     <card id ="58">
         <name>Megaesbirro</name>
+        <quality>1</quality>
     </card>
     <card id="59">
         <name>Mini pekka</name>
+        <quality>1</quality>
     </card>
     <card id="60">
         <name>Montapuercos</name>
+        <quality>1</quality>
     </card>
     <card id="61">
         <name>Mortero</name>
+        <quality>1</quality>
     </card>
     <card id="62">
         <name>Mosquetera</name>
+        <quality>1</quality>
     </card>
     <card id="63">
         <name>Pandilla de duendes</name>
+        <quality>0</quality>
     </card>
     <card id="64">
         <name>Recolector de elixir</name>
+        <quality>1</quality>
     </card>
     <card id="65">
         <name>Torre bombardera</name>
+        <quality>1</quality>
     </card>
     <card id="66">
         <name>Torre infernal</name>
+        <quality>1</quality>
     </card>
     <card id="67">
         <name>Torre tesla</name>
+        <quality>0</quality>
     </card>
     <card id="68">
         <name>Trío de Mosqueteras</name>
+        <quality>1</quality>
     </card>
     <card id ="69">
         <name>Descarga</name>
+        <quality>0</quality>
     </card>
     <card id = "70">
         <name>Barbaros</name>
+        <quality>0</quality>
     </card>
 </root>
