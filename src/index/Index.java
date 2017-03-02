@@ -26,6 +26,11 @@ public class Index {
      * Arraylist with all cards in xml file
      */
     private static ArrayList<Card> baraja;
+    private static int[] uploadCardCost = new int[]{2, 4, 10, 20, 50, 100, 200, 400, 800, 1000, 2000, 5000};
+    private static int[] CommonUploadGoldCost = new int[]{5, 20, 50, 150, 400, 1000, 2000, 4000, 8000, 20000, 50000, 100000};
+    private static int[] SpecialUploadGoldCost = new int[]{50, 150, 400, 1000, 2000, 4000, 8000, 20000, 50000, 100000};
+    private static int[] EpicUploadGoldCost = new int[]{400, 2000, 4000, 8000, 20000, 50000, 100000};
+    private static int[] LegendaryUploadGoldCost = new int[]{5000, 20000, 50000, 100000};
 
     private static ShowCardsController showCardsController;
     private static MainFrame mainFrame;
