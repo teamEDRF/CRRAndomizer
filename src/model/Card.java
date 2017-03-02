@@ -15,6 +15,15 @@ public class Card {
     private int id;
     private String name;
     private String url;
+    private int positionAsigned;
+
+    public int getPositionAsigned() {
+        return positionAsigned;
+    }
+
+    public void setPositionAsigned(int positionAsigned) {
+        this.positionAsigned = positionAsigned;
+    }
 
     public String getUrl() {
         return url;

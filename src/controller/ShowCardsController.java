@@ -18,8 +18,6 @@ import model.Card;
 public class ShowCardsController {
 
     private Random randomGenerator;
-    //conjunto de numeros que indican los id de las cartas
-    private HashSet<Integer> numbers;
     //cards selected
     private ArrayList<Card> cards;
 
@@ -37,28 +35,28 @@ public class ShowCardsController {
      * Initiate controller selecting the 8 cards
      */
     public ShowCardsController() {
-        this.numbers = new HashSet<>();
         this.randomGenerator = new Random();
         this.cards = new ArrayList<>();
-        selectCards();
+        selectCards(index.Index.allPositions);
     }
 
     /**
      * Select 8 random cards
      *
      */
-    public void selectCards() {
+    public void selectCards(int position) {
         int randomNum;
+        boolean salir = false;
         do {
             randomNum = randomGenerator.nextInt(index.Index.getBaraja().size());
-            numbers.add(randomNum);
-        } while (numbers.size() < 8);
-        // this equals than for
-        this.cards.clear();
-        numbers.forEach((number) -> {
-            this.cards.add(index.Index.getBaraja().get(number));
-        });
-        System.out.println(numbers);
+            if (!cardAlreadySelected(randomNum)) {
+                Card toAdd = index.Index.getBaraja().get(randomNum);
+                toAdd.setPositionAsigned(position);
+                cards.add(toAdd);
+                salir = true;
+            }
+        } while (!salir);
+        System.out.println(cards);
     }
 
     /**
@@ -67,19 +65,28 @@ public class ShowCardsController {
      * @param positions cards to remove
      */
     public void suffleCards(int[] positions) {
-        ArrayList<Integer> toRemove = new ArrayList<>();
-        //borra del hashset las posiciones que indica
         for (int position : positions) {
-            // same than foreach { if(xxxxx)}
-            for (Integer number : numbers) {
-                if (number == cards.get(position).getId()) {
-                    toRemove.add(number);
+            for (Card card : cards) {
+                if (card.getPositionAsigned() == position) {
+                    cards.remove(card);
+                    selectCards(position);
                 }
             }
         }
-        toRemove.forEach((integer) -> {
-            numbers.remove(integer);
-        });
-        selectCards();
+    }
+
+    private boolean cardAlreadySelected(int randomNum) {
+        for (Card card : cards) {
+            if (card.getId() == randomNum) {
+                return true;
+            }
+        }
+        return false;
+    }
+
+    private void selectCards(int[] allPositions) {
+        for (int position : allPositions) {
+            selectCards(position);
+        }
     }
 }
