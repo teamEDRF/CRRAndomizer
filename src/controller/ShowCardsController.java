@@ -6,7 +6,8 @@
 package controller;
 
 import java.util.ArrayList;
-import java.util.HashSet;
+import java.util.Arrays;
+import java.util.Collection;
 import java.util.Random;
 import model.Card;
 
@@ -16,7 +17,7 @@ import model.Card;
  * @author santi
  */
 public class ShowCardsController {
-
+    
     private Random randomGenerator;
     //cards selected
     private ArrayList<Card> cards;
@@ -65,16 +66,27 @@ public class ShowCardsController {
      * @param positions cards to remove
      */
     public void suffleCards(int[] positions) {
+        System.out.println(cards);
         for (int position : positions) {
-            for (Card card : cards) {
-                if (card.getPositionAsigned() == position) {
-                    cards.remove(card);
-                    selectCards(position);
-                }
-            }
+            suffleCard(position);
         }
     }
+    
+    public void suffleCard(int position) {
+        System.out.println(position);
+        for (Card card : cards) {
+            if (card.getPositionAsigned() == position) {
+                System.out.println(card);
 
+                // cards.remove(card);
+                selectCards(position);
+            }
+        }
+        Collection.sort (cards);
+        index.Index.getMainFrame().getShowCardPanel().updateCardViews();
+        
+    }
+    
     private boolean cardAlreadySelected(int randomNum) {
         for (Card card : cards) {
             if (card.getId() == randomNum) {
@@ -83,10 +95,19 @@ public class ShowCardsController {
         }
         return false;
     }
-
+    
     private void selectCards(int[] allPositions) {
         for (int position : allPositions) {
             selectCards(position);
         }
+    }
+    
+    public Card getCardByPosition(int i) {
+        for (Card card : cards) {
+            if (card.getPositionAsigned() == i) {
+                return card;
+            }
+        }
+        return null;
     }
 }

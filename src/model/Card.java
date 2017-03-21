@@ -10,7 +10,7 @@ package model;
  *
  * @author santi
  */
-public class Card {
+public class Card implements Comparable<Object> {
 
     private int id;
     private String name;
@@ -60,7 +60,14 @@ public class Card {
 
     @Override
     public String toString() {
-        return id + "-" + name + '}';
+        return id + "-" + name + "-" + positionAsigned;
+    }
+
+    @Override
+    public int compareTo(Object anotherInstance) {
+        Card tmp = (Card) anotherInstance;
+        return this.positionAsigned - tmp.positionAsigned;
+
     }
 
 }

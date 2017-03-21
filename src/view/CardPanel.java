@@ -42,8 +42,7 @@ public class CardPanel extends JPanel {
             public void mousePressed(MouseEvent e) {
                 int[] toRemove = new int[]{position};
                 // remove all cards (positions 0-7)
-                index.Index.getShowCardsController().suffleCards(toRemove);
-                index.Index.getMainFrame().getShowCardPanel().showCards(toRemove);
+                index.Index.getShowCardsController().suffleCard(position);
             }
 
             @Override
